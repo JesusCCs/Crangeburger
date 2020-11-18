@@ -8,6 +8,7 @@ public class Cliente extends Thread {
 
     private final Dispensador dispensador;
     private final int ID;
+    private int hambre;
 
     private static final int MIN = 1000;
     private static final int MAX = 3000;
@@ -33,6 +34,18 @@ public class Cliente extends Thread {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+    }
+
+    public void masHambre() {
+        hambre++;
+    }
+
+    public void comer() {
+        hambre = 0;
+    }
+
+    public int getHambre() {
+        return hambre;
     }
 
     public int getID() {

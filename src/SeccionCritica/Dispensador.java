@@ -20,13 +20,15 @@ public class Dispensador {
         System.out.println("Cliente " + cliente.getID() + " tiene hambre. Hamburguesas en el tray: " + tray);
 
         while (tray == 0) {
-            System.out.println("Cliente " + cliente.getID() + " no puede comer");
+            cliente.masHambre();
+            System.out.println("Cliente " + cliente.getID() + " no puede comer. Hambre: " + cliente.getHambre());
             try {
                 wait();
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
         }
+        cliente.comer();
         tray--;
 
         System.out.println("Cliente " + cliente.getID() + " come una cangreburguer. Hamburguesas en el tray: " + tray);
