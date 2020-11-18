@@ -26,9 +26,8 @@ public class Cliente extends Thread {
     }
 
     private void ejecutarAccion() {
-        dispensador.consumirHamburguesa(this);
-
         try {
+            dispensador.consumirHamburguesa(this);
             Random r = new Random();
             Thread.sleep(r.nextInt(MAX - MIN) + MIN);
         } catch (InterruptedException e) {
