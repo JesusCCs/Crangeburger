@@ -25,9 +25,8 @@ public class Cocinero extends Thread {
     }
 
     private void ejecutarAccion() {
-        dispensador.hacerHamburguesa(ID);
-
         try {
+            dispensador.hacerHamburguesa(ID);
             Random r = new Random();
             Thread.sleep(r.nextInt(MAX - MIN) + MIN);
         } catch (InterruptedException e) {

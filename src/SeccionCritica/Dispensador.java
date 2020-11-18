@@ -4,8 +4,8 @@ import Hilo.Cliente;
 
 public class Dispensador {
 
-    int tray;
-    Cliente[] clientes;
+    private int tray;
+    private Cliente[] clientes;
 
     public Dispensador() {
         tray = 0;
