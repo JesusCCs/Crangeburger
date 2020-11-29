@@ -6,8 +6,8 @@ import SeccionCritica.Dispensador;
 
 public class Main {
 
-    private static final int NUM_CLIENTES = 4;
-    private static final int NUM_COCINEROS = 1;
+    private static final int NUM_CLIENTES = 5;
+    private static final int NUM_COCINEROS = 3;
 
     public static void main(String[] args) {
 
@@ -23,8 +23,6 @@ public class Main {
         for (int i = 0; i < NUM_CLIENTES; i++) {
             clientes[i] = new Cliente(dispensador,i);
         }
-
-        dispensador.setClientes(clientes);
 
         for (Cocinero cocinero : cocineros) {
             cocinero.start();
