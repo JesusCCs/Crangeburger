@@ -24,11 +24,15 @@ public class Cocinero extends Thread {
         }
     }
 
+    /**
+     * Llamada a través de la referencia de la sección crítica al método principal de esta clase.
+     * Hacemos que haya cierto periodo de espera
+     */
     private void ejecutarAccion() {
         try {
-            dispensador.hacerHamburguesa(ID);
             Random r = new Random();
             Thread.sleep(r.nextInt(MAX - MIN) + MIN);
+            dispensador.hacerHamburguesa(ID);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

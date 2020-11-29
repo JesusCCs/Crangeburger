@@ -4,6 +4,10 @@ import Hilo.Cliente;
 import Hilo.Cocinero;
 import SeccionCritica.Dispensador;
 
+/**
+ * Clase principal donde se crean todos los objetos encesarios y los hilos que van a participar en la ejecución del
+ * programa
+ */
 public class Main {
 
     private static final int NUM_CLIENTES = 5;
